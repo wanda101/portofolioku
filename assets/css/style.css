@@ -1,0 +1,262 @@
+/* pakai z-index untuk mengatur tumpukan */
+body {
+  overflow-x: hidden;
+}
+.navbar {
+  position: relative;
+  z-index: 1;
+}
+
+.navbar-brand {
+  font-family: "Viga";
+  font-size: 32px;
+}
+.navbar-brand:hover {
+  transform: scale(1.1);
+}
+
+.nav-link {
+  font-family: "Viga";
+}
+
+.tombol {
+  /* untuk mengubah enjadi huruf besar */
+  text-transform: uppercase;
+  border-radius: 40px;
+}
+
+.jumbotron {
+  /* untuk memasukan gambar */
+  background-image: url("/assets/img/jacob.jpg");
+  /* untuk melebarkan gambar */
+  background-size: cover;
+  /* tinggi jumbotron */
+  height: 540px;
+  text-align: center;
+  position: relative;
+}
+
+.jumbotron .container {
+  position: relative;
+  z-index: 1;
+}
+
+.jumbotron::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  /* atur posisi biar naik 1 dimensi */
+  position: absolute;
+  /* supaya nempel di paling bawah jumbotronya */
+  bottom: 0;
+}
+
+.jumbotron .display-4 {
+  color: white;
+  margin-top: 150px;
+  font-weight: 200;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+.jumbotron .display-4 span {
+  font-weight: 500;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+/* info panel */
+.info-panel {
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  margin-top: -100px;
+  background-color: white;
+  padding: 30px;
+}
+
+.info-panel:hover {
+  transform: scale(1.1);
+}
+
+.info-panel img {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.info-panel h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.info-panel p {
+  font-size: 14px;
+  color: #acacac;
+  margin-top: -5px;
+  font-weight: 200;
+}
+
+.wrokspace {
+  margin-top: 120px;
+  text-align: center;
+}
+
+.wrokspace img {
+  border-radius: 73px;
+  background: linear-gradient(145deg, #ffffff, #e1e4e6);
+  box-shadow: 18px 18px 34px #8a8b8c, -18px -18px 34px #ffffff;
+  cursor: pointer;
+}
+
+.wrokspace img:hover {
+  transform: scale(1.1);
+}
+.wrokspace h3 {
+  margin-top: 30px;
+}
+.wrokspace h3 span {
+  font-weight: 500;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.wrokspace p {
+  font-size: 18px;
+  color: #acacac;
+  font-weight: 200;
+  margin: 30px 0;
+}
+
+/* karya */
+.karya {
+  margin-top: 100px;
+}
+
+.karya h3 {
+  font-size: 52px;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin-top: 30px;
+  margin-bottom: 70px;
+}
+
+.karya h3 span {
+  font-weight: 500;
+}
+
+.karya .album .isi .card-isi {
+  border-radius: 25px;
+  background: linear-gradient(145deg, #ffffff, #e1e4e6);
+  box-shadow: 13px 13px 26px #717273, -13px -13px 26px #ffffff;
+  min-height: 350px;
+  min-width: 200px;
+  background-color: #ddd;
+  color: #ffffff;
+  padding: 30px;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+
+.karya .album .isi .card-isi .tombol-isi {
+  background-color: white;
+  border-radius: 6px;
+  height: 30px;
+  padding-bottom: 40px;
+}
+
+.karya .album .isi .card-isi .tombol-isi .btn-tombol {
+  font-weight: 100;
+  font-family: "viga";
+}
+
+.karya .album .skill .card-skill {
+  border-radius: 25px;
+  background: linear-gradient(145deg, #ffffff, #e1e4e6);
+  box-shadow: 13px 13px 26px #717273, -13px -13px 26px #ffffff;
+  background: white;
+  color: black;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.karya .album .skill .card-skill .title-proges {
+  font-family: "viga";
+  color: rgb(155, 143, 143);
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+/* footer */
+.footer {
+  margin-top: 100px;
+}
+
+.footer p {
+  color: #acacac;
+  font-size: 18px;
+}
+/* destop vesi */
+@media (min-width: 992px) {
+  /* itu dan ini beubah jadi putih */
+  .navbar-brand,
+  .nav-link {
+    color: white !important;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  }
+  .nav-link {
+    font-family: "Viga";
+    text-transform: uppercase;
+    margin-right: 30px;
+  }
+
+  .nav-link:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #0b63dc;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 5px;
+    /* biar pas di hover tidak gerak */
+    margin-bottom: -8px;
+  }
+
+  .jumbotron {
+    margin-top: -75px;
+    /* tinggi jumbotron */
+    height: 640px;
+  }
+  .jumbotron .display-4 {
+    color: white;
+    margin-top: 150px;
+    font-weight: 200;
+    font-size: 62px;
+    margin-bottom: 30px;
+  }
+  .jumbotron .display-4 span {
+    font-weight: 500;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  }
+
+  .wrokspace {
+    text-align: left;
+  }
+  .info-panel img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  .karya .album .isi .card-isi {
+    border-radius: 25px;
+    background: linear-gradient(145deg, #ffffff, #e1e4e6);
+    box-shadow: 13px 13px 26px #717273, -13px -13px 26px #ffffff;
+    min-height: 250px;
+    background-color: #ddd;
+    color: #ffffff;
+    padding: 30px;
+    background-size: cover;
+    margin-bottom: 20px;
+  }
+}
